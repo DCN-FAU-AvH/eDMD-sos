@@ -12,3 +12,6 @@ All scripts require YALMIP and MOSEK to run. Both packages can be download for f
 
 The script logistic_bounds.m further uses the ChebFun package to improve numerical performance. It can be download for free at: https://www.chebfun.org/download/ 
 
+## **Repository Contents**
+This repository contains MATLAB script to reproduce the results for the examples in Section 5 of the paper. Precisely, the scripts perform the following tasks:
+- TBD
