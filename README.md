@@ -14,4 +14,6 @@ The script logistic_bounds.m further uses the ChebFun package to improve numeric
 
 ## **Repository Contents**
 This repository contains MATLAB script to reproduce the results for the examples in Section 5 of the paper. Precisely, the scripts perform the following tasks:
-- TBD
+- lyapunov_function.m discovers a Lyapunov function from data and corresponds to the example in Section 5.1.
+- VdP_bounds.m provides upper and lower bounds on the long-time average of the energy for the Van der Pol oscillator. This script accompanies the example in Section 5.2 and, in particular, is used to generate the data in Table 1.
+- logistic_bounds.m provides upper and lower bounds on the long-time average of the state-space observable, x, for the random logistic map. Chebyshev basis functions are used to improve numerical conditioning and therefore one must include the ChebFun package (see above for download link). The MATLAB functions chebsdp_1d.m, chebsdp_1d_locball.m, and edmd_with_thresholding.m are all called by logistic_bounds.m to perform specific tasks, primarily related to the Chebyshev basis functions. This script accompanies the example in Section 5.3 and, in particular, is used to generate the data in Table 2. 
