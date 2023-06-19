@@ -1,7 +1,7 @@
 % -------------------------------------------------------------------------
 % Ergodic optimization of the stochastic logistic map from data
 %
-% This script is used to replicate the results of Section 5.3 of Auxiliary
+% This script is used to replicate the results of Section 6.3 of Auxiliary
 % Functions as Koopman Observables: Data-Driven Polynomial Optimization for
 % Dynamical Systems by Jason J. Bramburger and Giovanni Fantuzzi.
 %
@@ -20,19 +20,21 @@
 % -------------------------------------------------------------------------
 
 % Clean workspace
-clear; close all; clc
+clear; 
+close all; 
+clc
 yalmip clear
 format long
 
 %% Method Parameters 
-% ---> See 
 % l = max degree of phi dictionary of obserables
 % degF = assumed degree of underlying map (2 in the case of logistic)
 % m = max degree of psi dictionary of obserables
 l = 2;
 degF = 2; 
 m = degF*l;
-TOL = 1e-3;    % thresholding tolerance for the EDMD matrix
+N = 1e4;
+TOL = 1/sqrt(N);    % thresholding tolerance for the EDMD matrix
 
 %% Generate synthetic data
 
@@ -41,7 +43,6 @@ T1 = chebpoly(0:l,[0,1]);
 T2 = chebpoly(0:m,[0,1]);
 
 % Generate data
-N = 1e7;
 x = zeros(N,1);
 x(1) = rand;
 for n = 2:N

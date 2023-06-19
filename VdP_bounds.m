@@ -1,7 +1,7 @@
 % -------------------------------------------------------------------------
 % Ergodic optimization of the Van der Pol oscillator from data
 %
-% This script is used to replicate the results of Section 5.2 of Auxiliary
+% This script is used to replicate the results of Section 6.2 of Auxiliary
 % Functions as Koopman Observables: Data-Driven Polynomial Optimization for
 % Dynamical Systems by Jason J. Bramburger and Giovanni Fantuzzi.
 %
@@ -23,7 +23,6 @@ yalmip clear
 format long
 
 %% Method Parameters 
-% ---> See 
 % maxPhi = max degree of phi dictionary of obserables
 % maxPsi = max degree of psi dictionary of obserables
 maxPhi = 10;

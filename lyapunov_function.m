@@ -1,7 +1,7 @@
 % -------------------------------------------------------------------------
 % Discovering Lyapunov functions from data
 %
-% This script is used to replicate the results of Section 5.1 of Auxiliary
+% This script is used to replicate the results of Section 6.1 of Auxiliary
 % Functions as Koopman Observables: Data-Driven Polynomial Optimization for
 % Dynamical Systems by Jason J. Bramburger and Giovanni Fantuzzi.
 %
@@ -25,7 +25,6 @@ yalmip clear
 format long
 
 %% Method Parameters 
-% ---> See 
 % maxPhi = max degree of phi dictionary of obserables
 % maxPsi = max degree of psi dictionary of obserables
 % epsilon = hyperparameter specific to Lyapunov function for sharp bounds
@@ -48,16 +47,16 @@ ydat(:,2) = -xdat(:,1) + 0.5*xdat(:,2) + (7/18)*xdat(:,1).^2;
 
 %% Create Psi_n and Phi_n matrices
 
-% Phi matrix
+% Psi matrix
 pow = monpowers(2,maxPsi);
-ell = size(pow,1); % number of nontrivial monomials in phi
+ell = size(pow,1); % number of nontrivial monomials in psi
 Psi = zeros(ell,N);
 for i = 1:ell
    zx = xdat.^pow(i,:);
    Psi(i,:) = prod(zx,2);
 end
 
-% Psi matrix
+% Phi matrix
 pow = monpowers(2,maxPhi);
 m = size(pow,1); % number of nontrivial monomials in phi
 Phi = zeros(m,N);
