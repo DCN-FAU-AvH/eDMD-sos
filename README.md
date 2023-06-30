@@ -10,7 +10,7 @@ All scripts require YALMIP and MOSEK to run. Both packages can be download for f
 - YALMIP: https://yalmip.github.io/download/
 - MOSEK: https://www.mosek.com/downloads/
 
-## ***Repository Contents**
+## **Repository Contents**
 This repository contains MATLAB script to reproduce the results for the examples in Section 5 of the paper. Precisely, the scripts perform the following tasks:
 - lyapunov_function.m discovers a Lyapunov function from data and corresponds to the example in Section 6.1.
 - VdP_bounds.m provides upper and lower bounds on the long-time average of the energy for the Van der Pol oscillator. This script accompanies the example in Section 6.2 and, in particular, is used to generate the data in Table 1.
